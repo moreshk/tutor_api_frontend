@@ -8,6 +8,7 @@ export default async function SignIn() {
   const session = await getSession();
 
   if (session) {
+    console.log("JWT Token: ", session.access_token); // Log the JWT token
     return redirect('/account');
   }
 
